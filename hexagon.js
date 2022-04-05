@@ -52,6 +52,17 @@ class Hexagon{
         {
             this.angle += map(noise(this.counter*.01),0,1,-1,4);
         }
+        if(this.counter%30 < 15 && this.counter%30>0){
+        this.x += map(noise(this.counter*.01),0,1,1,4);
+        this.y += map(noise(100+this.counter*.01),0,1,1,4);
+        }
+        else{
+            this.animated=true;
+            this.special=true;
+            this.redacted=false;
+
+        }
+
     }
 
 }

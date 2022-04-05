@@ -30,8 +30,8 @@ function setup() {
       var newx= (i*2*thescalar);
       var newy=(j*2*thescalar);
 
-      hexs.push(new Hexagon(newx,newy,thescalar,random(mypalette),90,false,animatedbasics,true));
-      hexs.push(new Hexagon(newx+1.5*thescalar,newy+thescalar,thescalar,mypalette[2],90,true,true,redactres));
+      hexs.push(new Hexagon(newx,newy,thescalar,random(mypalette),90,false,false,true));
+      hexs.push(new Hexagon(newx+1.5*thescalar,newy+thescalar,thescalar,mypalette[2],90,true,animatedbasics,redactres));
 
       // hexs.push(new Hexagon(newx+1.5*thescalar,newy+1*thescalar,thescalar,palet3[1],90));
       // hexs.push(new Hexagon(newx+3*thescalar,newy,thescalar,palet3[2],90));
@@ -41,7 +41,7 @@ function setup() {
 }
 
 function draw() {
-  background(0,10);
+  // background(0,10);
   for (let i=0;i<hexs.length;i++)
   {
     hexs[i].show();
